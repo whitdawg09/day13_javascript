@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#myDiv {
+  border: thick solid blue;
+}
+#thediv {
+  border: 3px solid red;
+}
+</style>
+<body>
+    <h1>Let's learn JavaScript!</h1>
+    <h2>How do we handle onclick events and alerts on an anchor?</h2>
+
+    <a href="https://www.youtube.com" target="_blank" onclick="alert('Warning! You are navigating away from the webpage')">YouTube!</a>
+
+    <hr>
+    <h2>How do we display and hide text?</h2>
+    <h2>What's my secret identity?</h2>
+    <p id="secretText" style="display:none;">hello hello</p>
+
+    <button onclick="document.getElementById('secretText').style.display='block';">Show Secret</button>
+    <button onclick="document.getElementById('secretText').style.display='none';">Hide Secret</button>
+
+    <h2>How do we change an image?</h2> 
+    <img src="images/bulbon.jpg" id="myimage" style="height: 200px; width: 200px;">
+    <button onclick="document.getElementById('myimage').src='images/bulboff.jpg'">Bulb Off</button>
+
+    <p id="alice">Hi. I am Alice.</p>
+    <button onclick="document.getElementById('alice').style.color='blue'; document.getElementById('alice').style.fontSize='10px';">Change Alice</button>
+
+    <br>
+    <div id="myDiv">This is a div.</div>
+    <br>
+    <button type="button" onclick="changeBorderColor()">Change color of the bottom border</button>
+
+    <script>
+    function changeBorderColor() {
+      document.getElementById("myDiv").style.borderBottomColor = "red";
+    }
+    </script>
+
+    <div id="thediv">This is another div.</div>
+    <br>
+    <button type="button" onclick="setOutline()">Set Outline</button>
+
+    <script>
+    function setOutline() {
+      document.getElementById("thediv").style.outline = "thick solid #0000FF";
+    }
+    </script>
+</body>
+</html>
